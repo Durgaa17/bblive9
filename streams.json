@@ -1,29 +1,41 @@
 {
-  "last_updated": "2025-11-13T12:25:08.758901Z",
+  "last_updated": "2025-11-13T13:07:24.747500Z",
   "sources": [
     {
       "id": 1,
-      "name": "Stream 1",
+      "name": "Bigg Boss Stream 1",
       "url": "https://player.twitch.tv/?channel=arivumani1076&parent=www.1tamilcrow.net",
       "platform": "Twitch",
       "channel": "arivumani1076",
-      "embed_url": "https://player.twitch.tv/?channel=arivumani1076&parent=www.1tamilcrow.net"
+      "embed_url": "https://player.twitch.tv/?channel=arivumani1076&parent=www.1tamilcrow.net",
+      "direct_url": "https://www.twitch.tv/arivumani1076",
+      "tvg_id": "BiggBoss1",
+      "tvg_name": "Bigg Boss Stream 1",
+      "group_title": "Bigg Boss Tamil"
     },
     {
       "id": 2,
-      "name": "Stream 2",
+      "name": "Bigg Boss Stream 2",
       "url": "https://ok.ru/videoembed/9484647407325?nochat=1",
       "platform": "OK.ru",
       "channel": "",
-      "embed_url": "https://ok.ru/videoembed/9484647407325?nochat=1"
+      "embed_url": "https://ok.ru/videoembed/9484647407325?nochat=1",
+      "direct_url": "https://durgaa17.github.io/bblive9/player.html?stream=2",
+      "tvg_id": "BiggBoss2",
+      "tvg_name": "Bigg Boss Stream 2",
+      "group_title": "Bigg Boss Tamil"
     },
     {
       "id": 3,
-      "name": "Stream 3",
+      "name": "Bigg Boss Stream 3",
       "url": "https://player.twitch.tv/?channel=arivumani1075&parent=www.1tamilcrow.net",
       "platform": "Twitch",
       "channel": "arivumani1075",
-      "embed_url": "https://player.twitch.tv/?channel=arivumani1075&parent=www.1tamilcrow.net"
+      "embed_url": "https://player.twitch.tv/?channel=arivumani1075&parent=www.1tamilcrow.net",
+      "direct_url": "https://www.twitch.tv/arivumani1075",
+      "tvg_id": "BiggBoss3",
+      "tvg_name": "Bigg Boss Stream 3",
+      "group_title": "Bigg Boss Tamil"
     }
   ],
   "total_sources": 3,
