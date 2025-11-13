@@ -29,7 +29,8 @@ class StreamManager {
     renderStreams() {
         const loadingEl = document.getElementById('loading');
         const errorEl = document.getElementById('error');
-        const streamsList = document.getElementById('streams-list');
+        const embedsContainer = document.getElementById('embeds-container');
+        const linksContainer = document.getElementById('links-container');
         const noStreamsEl = document.getElementById('no-streams');
         const lastUpdatedEl = document.getElementById('lastUpdated');
 
@@ -48,29 +49,51 @@ class StreamManager {
             return;
         }
 
-        // Render stream links
-        streamsList.innerHTML = '';
+        // Clear containers
+        embedsContainer.innerHTML = '';
+        linksContainer.innerHTML = '';
+
+        // Separate streams into embeds and links
+        const embedStreams = [];
+        const linkStreams = [];
 
         this.streamsData.sources.forEach(stream => {
-            const streamLink = this.createStreamLink(stream);
-            streamsList.appendChild(streamLink);
+            if (stream.platform === 'Twitch') {
+                linkStreams.push(stream);
+            } else {
+                embedStreams.push(stream);
+            }
         });
 
-        streamsList.classList.remove('hidden');
+        // Render embedded players at top
+        if (embedStreams.length > 0) {
+            embedStreams.forEach(stream => {
+                const streamEmbed = this.createStreamEmbed(stream);
+                embedsContainer.appendChild(streamEmbed);
+            });
+            document.getElementById('embeds-section').classList.remove('hidden');
+        }
+
+        // Render Twitch links at bottom
+        if (linkStreams.length > 0) {
+            linkStreams.forEach(stream => {
+                const streamLink = this.createTwitchLink(stream);
+                linksContainer.appendChild(streamLink);
+            });
+            document.getElementById('links-section').classList.remove('hidden');
+        }
+
+        // Show main container
+        document.getElementById('streams-container').classList.remove('hidden');
     }
 
-    createStreamLink(stream) {
-        const platformClass = `platform-${stream.platform.toLowerCase().replace('.', '')}`;
-        
-        // For Twitch, use direct channel URL
-        let watchUrl = stream.url;
-        if (stream.platform === 'Twitch' && stream.channel) {
-            watchUrl = `https://www.twitch.tv/${stream.channel}`;
-        }
+    createTwitchLink(stream) {
+        const platformClass = `platform-${stream.platform.toLowerCase()}`;
+        const watchUrl = `https://www.twitch.tv/${stream.channel}`;
 
         const link = document.createElement('a');
         link.href = watchUrl;
-        link.target = '_blank'; // Opens in new tab
+        link.target = '_blank';
         link.className = 'stream-link-item';
         
         link.innerHTML = `
@@ -78,11 +101,42 @@ class StreamManager {
                 <div class="stream-name">${stream.name}</div>
                 <div class="platform-badge ${platformClass}">${stream.platform}</div>
             </div>
-            ${stream.channel ? `<div class="stream-channel">${stream.channel}</div>` : ''}
-            <div class="stream-info">Click to open stream in new tab</div>
+            <div class="stream-channel">${stream.channel}</div>
+            <div class="stream-info">Click to open Twitch stream in new tab</div>
         `;
 
         return link;
+    }
+
+    createStreamEmbed(stream) {
+        const platformClass = `platform-${stream.platform.toLowerCase().replace('.', '')}`;
+
+        const embedCard = document.createElement('div');
+        embedCard.className = 'stream-embed-card';
+        
+        embedCard.innerHTML = `
+            <div class="stream-header">
+                <div class="stream-name">${stream.name}</div>
+                <div class="platform-badge ${platformClass}">${stream.platform}</div>
+            </div>
+            
+            ${stream.channel ? `<div class="stream-channel">${stream.channel}</div>` : ''}
+            
+            <div class="iframe-container">
+                <iframe 
+                    src="${stream.embed_url}" 
+                    allow="autoplay; encrypted-media" 
+                    allowfullscreen
+                    loading="lazy">
+                </iframe>
+            </div>
+            
+            <a href="${stream.url}" target="_blank" class="stream-link">
+                🔗 Open ${stream.platform} in new tab
+            </a>
+        `;
+
+        return embedCard;
     }
 
     showError() {
