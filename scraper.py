@@ -21,16 +21,6 @@ def get_best_streams():
             'name': 'Arivumani', 
             'url': 'https://arivumani.net/bigg-boss-season-9-live/',
             'priority': 1
-        },
-        {
-            'name': 'TamilDhool',
-            'url': 'https://tamildhool.art/vijay-tv/vijay-tv-show/bigg-boss-tamil-s9/bigg-boss-tamil-s9-live-stream-24x7-vijay-tv-show-2/',
-            'priority': 2
-        },
-        {
-            'name': 'TamilTVSerial',
-            'url': 'https://www.tamiltvserial.com/bigg-boss-tamil-9-live-24x7-stream-bigg-boss-9-tamil-live/',
-            'priority': 2
         }
     ]
     
@@ -45,37 +35,69 @@ def get_best_streams():
             soup = BeautifulSoup(response.content, 'html.parser')
             
             source_streams = extract_streams_from_page(soup, source['name'])
-            streams.extend(source_streams)
+            if source_streams:
+                streams.extend(source_streams)
+                print(f"  Found {len(source_streams)} streams")
+            else:
+                print(f"  No streams found")
             
         except Exception as e:
             print(f"  Error with {source['name']}: {e}")
     
-    # Remove duplicates and prioritize
+    # If no streams found from websites, use fallback streams
+    if not streams:
+        print("No streams found from websites, using fallback streams...")
+        streams = get_fallback_streams()
+    
+    # Remove duplicates
     unique_streams = remove_duplicate_streams(streams)
     
-    # Add direct Twitch channels as backup
-    twitch_channels = [
-        {'channel': 'arivumani1075', 'name': 'Arivumani 1075'},
-        {'channel': 'arivumani1076', 'name': 'Arivumani 1076'},
-        {'channel': 'tamillive', 'name': 'Tamil Live'},
-        {'channel': 'tamilstream', 'name': 'Tamil Stream'}
-    ]
-    
-    for twitch in twitch_channels:
-        unique_streams.append({
-            'id': len(unique_streams) + 1,
-            'name': f"Bigg Boss - {twitch['name']}",
-            'url': f"https://www.twitch.tv/{twitch['channel']}",
-            'embed_url': f"https://player.twitch.tv/?channel={twitch['channel']}&parent=durgaa17.github.io",
-            'platform': 'Twitch',
-            'channel': twitch['channel'],
-            'direct_url': f"https://www.twitch.tv/{twitch['channel']}",
-            'type': 'twitch_direct',
-            'quality': 'live',
-            'source': 'Twitch Direct'
-        })
+    # Add TVG metadata to all streams
+    for i, stream in enumerate(unique_streams):
+        stream['id'] = i + 1
+        stream['tvg_id'] = f"BiggBoss{i+1}"
+        stream['tvg_name'] = f"Bigg Boss {stream['platform']}"
+        stream['group_title'] = "Bigg Boss Tamil S9"
     
     return unique_streams[:8]  # Return top 8 streams max
+
+def get_fallback_streams():
+    """Fallback streams in case websites don't work"""
+    return [
+        {
+            'name': "Bigg Boss - Arivumani 1076",
+            'url': "https://player.twitch.tv/?channel=arivumani1076&parent=www.1tamilcrow.net",
+            'embed_url': "https://player.twitch.tv/?channel=arivumani1076&parent=www.1tamilcrow.net",
+            'platform': 'Twitch',
+            'channel': 'arivumani1076',
+            'direct_url': "https://www.twitch.tv/arivumani1076",
+            'type': 'twitch',
+            'quality': 'live',
+            'source': 'TamilCrow'
+        },
+        {
+            'name': "Bigg Boss - Arivumani 1075", 
+            'url': "https://player.twitch.tv/?channel=arivumani1075&parent=www.1tamilcrow.net",
+            'embed_url': "https://player.twitch.tv/?channel=arivumani1075&parent=www.1tamilcrow.net",
+            'platform': 'Twitch',
+            'channel': 'arivumani1075',
+            'direct_url': "https://www.twitch.tv/arivumani1075",
+            'type': 'twitch',
+            'quality': 'live',
+            'source': 'TamilCrow'
+        },
+        {
+            'name': "Bigg Boss - OK.ru",
+            'url': "https://ok.ru/videoembed/9484647407325?nochat=1",
+            'embed_url': "https://ok.ru/videoembed/9484647407325?nochat=1", 
+            'platform': 'OK.ru',
+            'channel': '',
+            'direct_url': "https://durgaa17.github.io/bblive9/player.html?source=okru",
+            'type': 'okru',
+            'quality': 'adaptive',
+            'source': 'TamilCrow'
+        }
+    ]
 
 def extract_streams_from_page(soup, source_name):
     """
@@ -98,7 +120,6 @@ def extract_streams_from_page(soup, source_name):
         channel = extract_channel_info(src, platform)
         
         stream_data = {
-            'id': len(streams) + 1,
             'name': f"Bigg Boss Stream {len(streams) + 1}",
             'url': src,
             'platform': platform,
@@ -107,16 +128,12 @@ def extract_streams_from_page(soup, source_name):
             'direct_url': get_direct_url(src, platform, channel),
             'type': 'embedded',
             'quality': 'adaptive',
-            'source': source_name,
-            'tvg_id': f"BiggBoss{len(streams) + 1}",
-            'tvg_name': f"Bigg Boss {platform}",
-            'group_title': "Bigg Boss Tamil S9"
+            'source': source_name
         }
         
         # Customize name based on platform and channel
         if platform == 'Twitch' and channel:
             stream_data['name'] = f"Bigg Boss - {channel}"
-            stream_data['tvg_name'] = f"Bigg Boss {channel}"
         
         streams.append(stream_data)
     
@@ -153,10 +170,8 @@ def get_direct_url(url, platform, channel):
     if platform == 'Twitch' and channel:
         return f"https://www.twitch.tv/{channel}"
     elif platform == 'OK.ru':
-        # Use web player fallback for OK.ru
         return f"https://durgaa17.github.io/bblive9/player.html?source=okru"
     else:
-        # For other platforms, use the original URL
         return url
 
 def remove_duplicate_streams(streams):
@@ -165,7 +180,6 @@ def remove_duplicate_streams(streams):
     unique_streams = []
     
     for stream in streams:
-        # Create a unique identifier for the stream
         stream_id = stream['url']
         if stream_id not in seen_urls:
             seen_urls.add(stream_id)
@@ -243,16 +257,13 @@ if __name__ == "__main__":
         f.write(m3u_web)
     
     print(f"✅ Version 3.0 Complete!")
-    print(f"📊 Found {len(streams)} unique streams")
+    print(f"📊 Found {len(streams)} streams")
     print("📁 Files generated:")
     print("   - streams.json")
-    print("   - playlist.m3u (Direct URLs)")
-    print("   - playlist_web.m3u (Web player)")
-    print("\n🎯 M3U URLs for IPTV:")
-    print("   https://durgaa17.github.io/bblive9/playlist.m3u")
-    print("   https://durgaa17.github.io/bblive9/playlist_web.m3u")
+    print("   - playlist.m3u")
+    print("   - playlist_web.m3u")
     
     # Show stream summary
     print("\n📺 Available Streams:")
     for stream in streams:
-        print(f"   • {stream['name']} ({stream['platform']}) - {stream['source']}")
+        print(f"   • {stream['name']} ({stream['platform']})")
