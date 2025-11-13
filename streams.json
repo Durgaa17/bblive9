@@ -1,43 +1,83 @@
 {
-  "last_updated": "2025-11-13T13:07:24.747500Z",
+  "version": "3.0",
+  "last_updated": "2025-11-13T13:52:20.658902+00:00",
   "sources": [
     {
-      "id": 1,
-      "name": "Bigg Boss Stream 1",
+      "name": "Bigg Boss - arivumani1076",
       "url": "https://player.twitch.tv/?channel=arivumani1076&parent=www.1tamilcrow.net",
       "platform": "Twitch",
       "channel": "arivumani1076",
       "embed_url": "https://player.twitch.tv/?channel=arivumani1076&parent=www.1tamilcrow.net",
       "direct_url": "https://www.twitch.tv/arivumani1076",
+      "type": "embedded",
+      "quality": "adaptive",
+      "source": "TamilCrow",
+      "id": 1,
       "tvg_id": "BiggBoss1",
-      "tvg_name": "Bigg Boss Stream 1",
-      "group_title": "Bigg Boss Tamil"
+      "tvg_name": "Bigg Boss Twitch",
+      "group_title": "Bigg Boss Tamil S9"
     },
     {
-      "id": 2,
       "name": "Bigg Boss Stream 2",
       "url": "https://ok.ru/videoembed/9484647407325?nochat=1",
       "platform": "OK.ru",
       "channel": "",
       "embed_url": "https://ok.ru/videoembed/9484647407325?nochat=1",
-      "direct_url": "https://durgaa17.github.io/bblive9/player.html?stream=2",
+      "direct_url": "https://durgaa17.github.io/bblive9/player.html?source=okru",
+      "type": "embedded",
+      "quality": "adaptive",
+      "source": "TamilCrow",
+      "id": 2,
       "tvg_id": "BiggBoss2",
-      "tvg_name": "Bigg Boss Stream 2",
-      "group_title": "Bigg Boss Tamil"
+      "tvg_name": "Bigg Boss OK.ru",
+      "group_title": "Bigg Boss Tamil S9"
     },
     {
-      "id": 3,
-      "name": "Bigg Boss Stream 3",
+      "name": "Bigg Boss - arivumani1075",
       "url": "https://player.twitch.tv/?channel=arivumani1075&parent=www.1tamilcrow.net",
       "platform": "Twitch",
       "channel": "arivumani1075",
       "embed_url": "https://player.twitch.tv/?channel=arivumani1075&parent=www.1tamilcrow.net",
       "direct_url": "https://www.twitch.tv/arivumani1075",
+      "type": "embedded",
+      "quality": "adaptive",
+      "source": "TamilCrow",
+      "id": 3,
       "tvg_id": "BiggBoss3",
-      "tvg_name": "Bigg Boss Stream 3",
-      "group_title": "Bigg Boss Tamil"
+      "tvg_name": "Bigg Boss Twitch",
+      "group_title": "Bigg Boss Tamil S9"
+    },
+    {
+      "name": "Bigg Boss - arivumani1075",
+      "url": "https://player.twitch.tv/?channel=arivumani1075&parent=arivumani.net",
+      "platform": "Twitch",
+      "channel": "arivumani1075",
+      "embed_url": "https://player.twitch.tv/?channel=arivumani1075&parent=arivumani.net",
+      "direct_url": "https://www.twitch.tv/arivumani1075",
+      "type": "embedded",
+      "quality": "adaptive",
+      "source": "Arivumani",
+      "id": 4,
+      "tvg_id": "BiggBoss4",
+      "tvg_name": "Bigg Boss Twitch",
+      "group_title": "Bigg Boss Tamil S9"
+    },
+    {
+      "name": "Bigg Boss - arivumani1076",
+      "url": "https://player.twitch.tv/?channel=arivumani1076&parent=arivumani.net",
+      "platform": "Twitch",
+      "channel": "arivumani1076",
+      "embed_url": "https://player.twitch.tv/?channel=arivumani1076&parent=arivumani.net",
+      "direct_url": "https://www.twitch.tv/arivumani1076",
+      "type": "embedded",
+      "quality": "adaptive",
+      "source": "Arivumani",
+      "id": 5,
+      "tvg_id": "BiggBoss5",
+      "tvg_name": "Bigg Boss Twitch",
+      "group_title": "Bigg Boss Tamil S9"
     }
   ],
-  "total_sources": 3,
+  "total_sources": 5,
   "status": "success"
 }
