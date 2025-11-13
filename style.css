@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto;
     background: white;
     border-radius: 15px;
@@ -61,7 +61,106 @@ main {
     color: #c62828;
 }
 
-.streams-list {
+/* Sections */
+.section-title {
+    text-align: center;
+    padding: 20px;
+    background: #f8f9fa;
+    margin: 0;
+    color: #2c3e50;
+    border-bottom: 1px solid #e9ecef;
+}
+
+/* Embedded Players Section */
+.embeds-grid {
+    padding: 20px;
+}
+
+.stream-embed-card {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+}
+
+.stream-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.stream-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.platform-badge {
+    color: white;
+    padding: 4px 12px;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.platform-twitch {
+    background: #6441a5;
+}
+
+.platform-okru {
+    background: #ee8208;
+}
+
+.platform-youtube {
+    background: #ff0000;
+}
+
+.stream-channel {
+    color: #7f8c8d;
+    margin-bottom: 15px;
+    font-style: italic;
+}
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    margin-bottom: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.stream-link {
+    display: block;
+    background: #3498db;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.stream-link:hover {
+    background: #2980b9;
+}
+
+/* Twitch Links Section */
+.links-list {
     padding: 20px;
 }
 
@@ -78,11 +177,11 @@ main {
 }
 
 .stream-link-item:hover {
-    background: #3498db;
+    background: #6441a5;
     color: white;
-    border-color: #3498db;
+    border-color: #6441a5;
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+    box-shadow: 0 5px 15px rgba(100, 65, 165, 0.3);
 }
 
 .stream-link-header {
@@ -90,38 +189,6 @@ main {
     justify-content: space-between;
     align-items: center;
     margin-bottom: 5px;
-}
-
-.stream-name {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.platform-badge {
-    background: #3498db;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    font-weight: bold;
-}
-
-.platform-twitch {
-    background: #6441a5;
-}
-
-.platform-youtube {
-    background: #ff0000;
-}
-
-.platform-okru {
-    background: #ee8208;
-}
-
-.stream-channel {
-    font-size: 0.9rem;
-    opacity: 0.8;
-    font-style: italic;
 }
 
 .stream-info {
@@ -171,6 +238,12 @@ footer a:hover {
         font-size: 1.7rem;
     }
     
+    .embeds-grid,
+    .links-list {
+        padding: 15px;
+    }
+    
+    .stream-embed-card,
     .stream-link-item {
         padding: 12px 15px;
     }
