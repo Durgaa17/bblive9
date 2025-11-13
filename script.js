@@ -11,7 +11,6 @@ class StreamManager {
 
     async loadStreams() {
         try {
-            // Add cache busting parameter
             const response = await fetch('./streams.json?' + new Date().getTime());
             
             if (!response.ok) {
@@ -30,7 +29,7 @@ class StreamManager {
     renderStreams() {
         const loadingEl = document.getElementById('loading');
         const errorEl = document.getElementById('error');
-        const streamsContainer = document.getElementById('streams-container');
+        const streamsList = document.getElementById('streams-list');
         const noStreamsEl = document.getElementById('no-streams');
         const lastUpdatedEl = document.getElementById('lastUpdated');
 
@@ -49,47 +48,41 @@ class StreamManager {
             return;
         }
 
-        // Render streams
-        const streamsGrid = document.getElementById('streamsGrid');
-        streamsGrid.innerHTML = '';
+        // Render stream links
+        streamsList.innerHTML = '';
 
         this.streamsData.sources.forEach(stream => {
-            const streamCard = this.createStreamCard(stream);
-            streamsGrid.appendChild(streamCard);
+            const streamLink = this.createStreamLink(stream);
+            streamsList.appendChild(streamLink);
         });
 
-        streamsContainer.classList.remove('hidden');
+        streamsList.classList.remove('hidden');
     }
 
-    createStreamCard(stream) {
-        const card = document.createElement('div');
-        card.className = 'stream-card';
-
+    createStreamLink(stream) {
         const platformClass = `platform-${stream.platform.toLowerCase().replace('.', '')}`;
+        
+        // For Twitch, use direct channel URL
+        let watchUrl = stream.url;
+        if (stream.platform === 'Twitch' && stream.channel) {
+            watchUrl = `https://www.twitch.tv/${stream.channel}`;
+        }
 
-        card.innerHTML = `
-            <div class="stream-header">
+        const link = document.createElement('a');
+        link.href = watchUrl;
+        link.target = '_blank'; // Opens in new tab
+        link.className = 'stream-link-item';
+        
+        link.innerHTML = `
+            <div class="stream-link-header">
                 <div class="stream-name">${stream.name}</div>
                 <div class="platform-badge ${platformClass}">${stream.platform}</div>
             </div>
-            
-            ${stream.channel ? `<div class="stream-channel">Channel: ${stream.channel}</div>` : ''}
-            
-            <div class="iframe-container">
-                <iframe 
-                    src="${stream.embed_url}" 
-                    allow="autoplay; encrypted-media" 
-                    allowfullscreen
-                    loading="lazy">
-                </iframe>
-            </div>
-            
-            <a href="${stream.url}" target="_blank" class="stream-link">
-                🔗 Open ${stream.platform} Stream
-            </a>
+            ${stream.channel ? `<div class="stream-channel">${stream.channel}</div>` : ''}
+            <div class="stream-info">Click to open stream in new tab</div>
         `;
 
-        return card;
+        return link;
     }
 
     showError() {
