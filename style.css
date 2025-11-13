@@ -39,6 +39,15 @@ header h1 {
     margin-bottom: 15px;
 }
 
+.lovely-text {
+    font-size: 1rem;
+    color: #ff6b6b;
+    margin-bottom: 15px;
+    font-style: italic;
+    text-shadow: 0 0 10px rgba(255, 107, 107, 0.3);
+    animation: heartbeat 1.5s ease-in-out infinite both;
+}
+
 .last-updated {
     background: rgba(255, 255, 255, 0.2);
     padding: 8px 16px;
@@ -115,6 +124,10 @@ main {
 
 .platform-youtube {
     background: #ff0000;
+}
+
+.platform-dailymotion {
+    background: #0066dc;
 }
 
 .stream-channel {
@@ -218,14 +231,38 @@ footer a:hover {
     display: none;
 }
 
-/* Loading animation */
-.loading p {
-    animation: pulse 1.5s ease-in-out infinite alternate;
+/* Animations */
+@keyframes heartbeat {
+    from {
+        transform: scale(1);
+        transform-origin: center center;
+        animation-timing-function: ease-out;
+    }
+    10% {
+        transform: scale(0.91);
+        animation-timing-function: ease-in;
+    }
+    17% {
+        transform: scale(0.98);
+        animation-timing-function: ease-out;
+    }
+    33% {
+        transform: scale(0.87);
+        animation-timing-function: ease-in;
+    }
+    45% {
+        transform: scale(1);
+        animation-timing-function: ease-out;
+    }
 }
 
 @keyframes pulse {
     from { opacity: 0.6; }
     to { opacity: 1; }
+}
+
+.loading p {
+    animation: pulse 1.5s ease-in-out infinite alternate;
 }
 
 /* Mobile responsive */
@@ -234,8 +271,20 @@ footer a:hover {
         padding: 10px;
     }
     
+    header {
+        padding: 20px;
+    }
+    
     header h1 {
         font-size: 1.7rem;
+    }
+    
+    .subtitle {
+        font-size: 1rem;
+    }
+    
+    .lovely-text {
+        font-size: 0.9rem;
     }
     
     .embeds-grid,
@@ -246,5 +295,29 @@ footer a:hover {
     .stream-embed-card,
     .stream-link-item {
         padding: 12px 15px;
+    }
+    
+    .stream-name {
+        font-size: 1.1rem;
+    }
+    
+    .iframe-container {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .stream-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .platform-badge {
+        align-self: flex-start;
     }
 }
