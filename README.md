@@ -29,5 +29,21 @@ pip install requests beautifulsoup4
 # Run scraper manually
 python3 scraper.py
 
+```
 # View the website
+
+# Bigg Boss Tamil Season 9 - Version 3.0
+
+**M3U IPTV Integration + Web Interface**
+
+## 🆕 Version 3.0 Features
+- **M3U Playlist Generation** for IPTV/OTT players
+- **Web Player Fallback** for embedded streams
+- **OTT Player Optimized** metadata
+- **Auto-updating** every 6 hours
+
+## 📺 M3U Playlist URLs
+Add these to your IPTV player:
+
+**Direct Links (Recommended):**
 open index.html
