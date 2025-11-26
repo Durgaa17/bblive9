@@ -1,13 +1,13 @@
 {
-  "last_updated": "2025-11-25T18:19:16.927120Z",
+  "last_updated": "2025-11-26T00:57:41.081448Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=abishanthan&parent=www.1tamilcrow.net",
-      "platform": "Twitch",
-      "channel": "abishanthan",
-      "embed_url": "https://player.twitch.tv/?channel=abishanthan&parent=www.1tamilcrow.net"
+      "url": "https://player.kick.com/tamilray211017",
+      "platform": "Unknown",
+      "channel": "",
+      "embed_url": "https://player.kick.com/tamilray211017"
     },
     {
       "id": 2,
