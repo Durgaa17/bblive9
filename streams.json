@@ -1,13 +1,13 @@
 {
-  "last_updated": "2025-12-06T12:21:57.500632Z",
+  "last_updated": "2025-12-06T18:16:15.175189Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=Payacami&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=Krishnaswami15&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "Payacami",
-      "embed_url": "https://player.twitch.tv/?channel=Payacami&parent=www.1tamilcrow.net"
+      "channel": "Krishnaswami15",
+      "embed_url": "https://player.twitch.tv/?channel=Krishnaswami15&parent=www.1tamilcrow.net"
     },
     {
       "id": 2,
