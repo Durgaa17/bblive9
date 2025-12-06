@@ -1,5 +1,5 @@
 {
-  "last_updated": "2025-12-05T18:15:48.549156Z",
+  "last_updated": "2025-12-06T00:56:20.862415Z",
   "sources": [
     {
       "id": 1,
@@ -12,20 +12,12 @@
     {
       "id": 2,
       "name": "Stream 2",
-      "url": "https://player.twitch.tv/?channel=arivumani2027&parent=www.1tamilcrow.net",
-      "platform": "Twitch",
-      "channel": "arivumani2027",
-      "embed_url": "https://player.twitch.tv/?channel=arivumani2027&parent=www.1tamilcrow.net"
-    },
-    {
-      "id": 3,
-      "name": "Stream 3",
       "url": "https://player.twitch.tv/?channel=arivumani2025&parent=www.1tamilcrow.net",
       "platform": "Twitch",
       "channel": "arivumani2025",
       "embed_url": "https://player.twitch.tv/?channel=arivumani2025&parent=www.1tamilcrow.net"
     }
   ],
-  "total_sources": 3,
+  "total_sources": 2,
   "status": "success"
 }
