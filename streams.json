@@ -1,21 +1,21 @@
 {
-  "last_updated": "2025-12-09T12:26:02.639952Z",
+  "last_updated": "2025-12-09T18:16:34.987140Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=Mayammal&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=Palamurukan&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "Mayammal",
-      "embed_url": "https://player.twitch.tv/?channel=Mayammal&parent=www.1tamilcrow.net"
+      "channel": "Palamurukan",
+      "embed_url": "https://player.twitch.tv/?channel=Palamurukan&parent=www.1tamilcrow.net"
     },
     {
       "id": 2,
       "name": "Stream 2",
-      "url": "https://player.twitch.tv/?channel=arivumani2031&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=arivumani2035&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "arivumani2031",
-      "embed_url": "https://player.twitch.tv/?channel=arivumani2031&parent=www.1tamilcrow.net"
+      "channel": "arivumani2035",
+      "embed_url": "https://player.twitch.tv/?channel=arivumani2035&parent=www.1tamilcrow.net"
     }
   ],
   "total_sources": 2,
