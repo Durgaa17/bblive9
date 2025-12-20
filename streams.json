@@ -1,13 +1,13 @@
 {
-  "last_updated": "2025-12-20T12:21:53.543586Z",
+  "last_updated": "2025-12-20T18:16:12.041031Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=Divyarathan&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=Mikaanthan&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "Divyarathan",
-      "embed_url": "https://player.twitch.tv/?channel=Divyarathan&parent=www.1tamilcrow.net"
+      "channel": "Mikaanthan",
+      "embed_url": "https://player.twitch.tv/?channel=Mikaanthan&parent=www.1tamilcrow.net"
     },
     {
       "id": 2,
