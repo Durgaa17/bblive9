@@ -1,13 +1,13 @@
 {
-  "last_updated": "2025-12-23T18:19:23.660621Z",
+  "last_updated": "2025-12-24T01:00:22.721632Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=Thaeshikan&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=Nanthagoban&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "Thaeshikan",
-      "embed_url": "https://player.twitch.tv/?channel=Thaeshikan&parent=www.1tamilcrow.net"
+      "channel": "Nanthagoban",
+      "embed_url": "https://player.twitch.tv/?channel=Nanthagoban&parent=www.1tamilcrow.net"
     },
     {
       "id": 2,
