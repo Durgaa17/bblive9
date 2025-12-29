@@ -1,13 +1,13 @@
 {
-  "last_updated": "2025-12-28T18:18:16.348491Z",
+  "last_updated": "2025-12-29T01:06:12.395330Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=Santhavathanan&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=Eahalaivan&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "Santhavathanan",
-      "embed_url": "https://player.twitch.tv/?channel=Santhavathanan&parent=www.1tamilcrow.net"
+      "channel": "Eahalaivan",
+      "embed_url": "https://player.twitch.tv/?channel=Eahalaivan&parent=www.1tamilcrow.net"
     },
     {
       "id": 2,
