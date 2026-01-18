@@ -1,13 +1,13 @@
 {
-  "last_updated": "2026-01-18T12:23:11.551194Z",
+  "last_updated": "2026-01-18T18:17:02.207415Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=rasigan17&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=arivumani2084&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "rasigan17",
-      "embed_url": "https://player.twitch.tv/?channel=rasigan17&parent=www.1tamilcrow.net"
+      "channel": "arivumani2084",
+      "embed_url": "https://player.twitch.tv/?channel=arivumani2084&parent=www.1tamilcrow.net"
     },
     {
       "id": 2,
@@ -20,10 +20,10 @@
     {
       "id": 3,
       "name": "Stream 3",
-      "url": "https://player.twitch.tv/?channel=arivumani2082&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=Sadanand17&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "arivumani2082",
-      "embed_url": "https://player.twitch.tv/?channel=arivumani2082&parent=www.1tamilcrow.net"
+      "channel": "Sadanand17",
+      "embed_url": "https://player.twitch.tv/?channel=Sadanand17&parent=www.1tamilcrow.net"
     }
   ],
   "total_sources": 3,
