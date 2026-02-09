@@ -1,31 +1,7 @@
 {
-  "last_updated": "2026-02-09T01:18:36.999314Z",
-  "sources": [
-    {
-      "id": 1,
-      "name": "Stream 1",
-      "url": "https://player.twitch.tv/?channel=arivumani2084&parent=www.1tamilcrow.net",
-      "platform": "Twitch",
-      "channel": "arivumani2084",
-      "embed_url": "https://player.twitch.tv/?channel=arivumani2084&parent=www.1tamilcrow.net"
-    },
-    {
-      "id": 2,
-      "name": "Stream 2",
-      "url": "https://player3.spirituallifewell.com/embed/da775ca972d0e9ee51ea166f95c386d4",
-      "platform": "Unknown",
-      "channel": "",
-      "embed_url": "https://player3.spirituallifewell.com/embed/da775ca972d0e9ee51ea166f95c386d4"
-    },
-    {
-      "id": 3,
-      "name": "Stream 3",
-      "url": "https://player.twitch.tv/?channel=Sadanand17&parent=www.1tamilcrow.net",
-      "platform": "Twitch",
-      "channel": "Sadanand17",
-      "embed_url": "https://player.twitch.tv/?channel=Sadanand17&parent=www.1tamilcrow.net"
-    }
-  ],
-  "total_sources": 3,
-  "status": "success"
+  "last_updated": "2026-02-09T06:57:10.491912Z",
+  "sources": [],
+  "total_sources": 0,
+  "status": "error",
+  "error_message": "HTTPSConnectionPool(host='www.1tamilcrow.net', port=443): Max retries exceeded with url: /watch-bigg-boss-tamil-season-9-live-stream/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.1tamilcrow.net', port=443) at 0x7f5ca3a7ecf0>, 'Connection to www.1tamilcrow.net timed out. (connect timeout=None)'))"
 }
