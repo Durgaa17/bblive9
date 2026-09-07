@@ -1,29 +1,29 @@
 {
-  "last_updated": "2026-09-07T11:03:12.072588Z",
+  "last_updated": "2026-09-07T16:51:51.006632Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2",
+      "url": "https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a",
       "platform": "Unknown",
       "channel": "",
-      "embed_url": "https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2"
+      "embed_url": "https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a"
     },
     {
       "id": 2,
       "name": "Stream 2",
-      "url": "https://player.twitch.tv/?channel=arivumani101011&parent=www.1tamilcrow.net",
+      "url": "https://player.twitch.tv/?channel=sw1ften1&parent=www.1tamilcrow.net",
       "platform": "Twitch",
-      "channel": "arivumani101011",
-      "embed_url": "https://player.twitch.tv/?channel=arivumani101011&parent=www.1tamilcrow.net"
+      "channel": "sw1ften1",
+      "embed_url": "https://player.twitch.tv/?channel=sw1ften1&parent=www.1tamilcrow.net"
     },
     {
       "id": 3,
       "name": "Stream 3",
-      "url": "https://player.twitch.tv/?channel=reporterro&parent=www.1tamilcrow.net",
-      "platform": "Twitch",
-      "channel": "reporterro",
-      "embed_url": "https://player.twitch.tv/?channel=reporterro&parent=www.1tamilcrow.net"
+      "url": "https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2",
+      "platform": "Unknown",
+      "channel": "",
+      "embed_url": "https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2"
     }
   ],
   "total_sources": 3,
