@@ -1,31 +1,23 @@
 {
-  "last_updated": "2026-09-10T15:30:08.022561Z",
+  "last_updated": "2026-09-10T20:13:49.241120Z",
   "sources": [
     {
       "id": 1,
       "name": "Stream 1",
-      "url": "https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a",
-      "platform": "Unknown",
-      "channel": "",
-      "embed_url": "https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a"
-    },
-    {
-      "id": 2,
-      "name": "Stream 2",
-      "url": "https://player.twitch.tv/?channel=sw1ften1&parent=www.1tamilcrow.net",
-      "platform": "Twitch",
-      "channel": "sw1ften1",
-      "embed_url": "https://player.twitch.tv/?channel=sw1ften1&parent=www.1tamilcrow.net"
-    },
-    {
-      "id": 3,
-      "name": "Stream 3",
       "url": "https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2",
       "platform": "Unknown",
       "channel": "",
       "embed_url": "https://player4.spirituallifewell.com/videos/abbd4fae-f28d-41c6-8ff0-1942faf3aec2"
+    },
+    {
+      "id": 2,
+      "name": "Stream 2",
+      "url": "https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a",
+      "platform": "Unknown",
+      "channel": "",
+      "embed_url": "https://player4.spirituallifewell.com/videos/97e0c6a0-7edf-4050-81cc-d5b22203687a"
     }
   ],
-  "total_sources": 3,
+  "total_sources": 2,
   "status": "success"
 }
